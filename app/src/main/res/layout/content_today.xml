@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:id="@+id/newfood_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:text="New Food Entry"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/userEntry_calories"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="#B3B1B1"
+        android:hint="Calories"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newfood_tv" />
+
+
+    <EditText
+        android:id="@+id/userEntry_protein"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="#B3B1B1"
+        android:gravity="center"
+        android:hint="Protein"
+        app:layout_constraintEnd_toStartOf="@id/userEntry_carbs"
+        app:layout_constraintStart_toEndOf="@id/userEntry_calories"
+        app:layout_constraintTop_toBottomOf="@+id/newfood_tv" />
+
+
+    <EditText
+        android:id="@+id/userEntry_carbs"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:background="#B3B1B1"
+        android:gravity="center"
+        android:hint="Carbs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newfood_tv" />
+
+    <EditText
+        android:id="@+id/userEntry_foodName"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="#B3B1B1"
+        android:hint="Enter Food name"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userEntry_protein" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/category_choose_spinner"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:tooltipText="Categories"
+        app:layout_constraintTop_toBottomOf="@id/tv_enterCategory"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/enterButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ENTER"
+        android:textColor="@android:color/white"
+        app:backgroundTint="#535753"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/category_choose_spinner"
+        app:layout_constraintVertical_bias="0.045" />
+
+    <TextView
+        android:id="@+id/tv_enterCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textColor="@android:color/white"
+        android:text="Choose a Food Category Bleow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userEntry_foodName" />
+
+    <TextView
+        android:id="@+id/tv_TodaysTotal"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Todays Total"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterButton" />
+
+    <TextView
+        android:id="@+id/tv_totalCalories"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Total calories"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_TodaysTotal" />
+
+    <TextView
+        android:id="@+id/calorieTotal"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_totalCalories"/>
+
+    <TextView
+        android:id="@+id/tv_totalProtein"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Total Protein"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calorieTotal" />
+
+    <TextView
+        android:id="@+id/proteinTotal"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        android:background="@android:color/white"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_totalProtein"/>
+
+    <TextView
+        android:id="@+id/tv_totalCarbs"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Total Carbs"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/proteinTotal" />
+
+    <TextView
+        android:id="@+id/carbTotal"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:background="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_totalCarbs"/>
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset Totals"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/carbTotal" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

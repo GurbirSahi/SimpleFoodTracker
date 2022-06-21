@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="75dp"
+    android:background="@color/colorAccent">
+
+
+
+    <TextView
+        android:layout_width="400dp"
+        android:layout_height="40dp"
+        android:text="Common Foods"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:id="@+id/newfood_tv"
+        android:layout_width="300dp"
+        android:layout_height="30dp"
+        android:background="@android:color/white"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="12dp"
+        android:hint="Enter food name,serving size,  cals, prot, carbs and press enter"/>
+
+    <Button
+        android:id="@+id/newFoodButton"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="New Food"
+        android:layout_gravity="center"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="473dp"
+        android:layout_marginTop="50sp"
+        android:background="@android:color/white">
+
+        <TextView
+            android:id="@+id/commonFoodsTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\n\nChicken Breast: 100 grams, 165 cals, 31g protein, 0g carbs\n\nChicken Thighs: 100 grams, 177 cals, 24g protein, 0g carbs\n\nChicken Drumstick: 100 grams, 159 cals, 18g protein, 0g carbs\n\nChicken Wings: 100 grams, 203 cals, 30g protein, 0g carbs\n\nBasmati Rice: 100 grams, 130 cals, 2.7g protein, 28g carbs\n\n"
+            android:gravity="left"
+            android:paddingLeft="10dp"
+            android:textSize="20dp" />
+    </ScrollView>
+</LinearLayout>
